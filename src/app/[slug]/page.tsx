@@ -7,11 +7,7 @@ import { generateMeta } from "@/lib/metadata";
 import { getPublishedServicePages, getServicePageBySlug } from "@/lib/cms";
 import { NAP, SITE_URL } from "@/lib/data";
 
-<<<<<<< HEAD
 export const revalidate = 3600;
-=======
-export const dynamic = "force-dynamic";
->>>>>>> 7ee1612 (update project)
 
 export async function generateStaticParams() {
     const pages = await getPublishedServicePages();

@@ -61,17 +61,6 @@ export default function Header() {
                 </button>
             </div>
 
-<<<<<<< HEAD
-            {/* Mobile menu */}
-            {open && (
-                <div style={{
-                    background: "#fff", borderTop: "1px solid #e5e7eb",
-                    padding: "1rem 1.25rem 1.5rem",
-                }}>
-                    <MobileNav setOpen={setOpen} />
-                </div>
-            )}
-=======
             {/* Mobile menu overlay */}
             <div style={{
                 position: "fixed", top: 0, left: 0, width: "100%", height: "100vh",
@@ -123,7 +112,6 @@ export default function Header() {
                     <MobileNav setOpen={setOpen} />
                 </div>
             </div>
->>>>>>> 7ee1612 (update project)
 
             <style>{`
         @media (max-width: 900px) {
@@ -199,34 +187,6 @@ function NavDropdown({ label, items }: { label: string; items: typeof SERVICES }
 }
 
 function MobileNav({ setOpen }: { setOpen: (v: boolean) => void }) {
-<<<<<<< HEAD
-    return (
-        <nav style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-            {[
-                { href: "/", label: "🏠 Strona Główna" },
-                { href: "/serwis-rowerowy-warszawa", label: "🔧 Serwis Rowerowy" },
-                { href: "/naprawa-rowerow-warszawa", label: "⚙️ Naprawa Rowerów" },
-                { href: "/przeglad-roweru-warszawa", label: "🔍 Przegląd Roweru" },
-                { href: "/serwis-roweru-elektrycznego-warszawa", label: "⚡ Serwis E-Bike" },
-                { href: "/mobilny-serwis-rowerowy-warszawa", label: "🚐 Mobilny Serwis" },
-                { href: "/budowa-kol-rowerowych-warszawa", label: "⭕ Budowa Kół" },
-                { href: "/serwis-amortyzatora-warszawa", label: "🏔️ Serwis Amortyzatora" },
-                { href: "/cennik", label: "💰 Cennik" },
-                { href: "/blog", label: "📝 Blog" },
-                { href: "/#kontakt", label: "📍 Kontakt" },
-            ].map(({ href, label }) => (
-                <Link key={href} href={href} onClick={() => setOpen(false)} style={{
-                    color: "var(--gray-700)", fontWeight: 600, fontSize: "1rem",
-                    padding: "0.75rem 0.5rem", borderBottom: "1px solid #f3f4f6",
-                    textDecoration: "none",
-                }}>{label}</Link>
-            ))}
-            <a href="/#kontakt" className="btn-primary" style={{ marginTop: "0.75rem", textAlign: "center" }}
-                onClick={() => setOpen(false)}>
-                📅 Zarezerwuj wizytę
-            </a>
-        </nav>
-=======
     const [servicesOpen, setServicesOpen] = useState(false);
 
     return (
@@ -306,6 +266,5 @@ function MobileNav({ setOpen }: { setOpen: (v: boolean) => void }) {
                 </a>
             </div>
         </div>
->>>>>>> 7ee1612 (update project)
     );
 }

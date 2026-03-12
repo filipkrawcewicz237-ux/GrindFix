@@ -4,11 +4,7 @@ import { getBlogPosts } from "@/lib/cms";
 import BlogCard from "@/components/ui/BlogCard";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
-<<<<<<< HEAD
 export const revalidate = 3600;
-=======
-export const dynamic = "force-dynamic";
->>>>>>> 7ee1612 (update project)
 
 export const metadata: Metadata = generateMeta({
     title: "Blog Rowerowy – Porady i Poradniki | GRINDFIX Warszawa",

@@ -373,14 +373,9 @@ a:hover { color: var(--green-dark); }
   display: none;
 }
 @media (max-width: 767px) {
-<<<<<<< HEAD
-  .desktop-contact-form {
-    display: none;
-=======
   .reservation-form {
     display: block !important;
     margin-bottom: 2.5rem;
->>>>>>> 7ee1612 (update project)
   }
   .mobile-contact-buttons {
     display: flex;
@@ -412,8 +407,5 @@ a:hover { color: var(--green-dark); }
 .btn-telegram { background-color: #24A1DE; }
 .btn-whatsapp { background-color: #25D366; }
 .btn-messenger { background-color: #0084FF; }
-<<<<<<< HEAD
-=======
 
 /* Force HMR refresh */
->>>>>>> 7ee1612 (update project)

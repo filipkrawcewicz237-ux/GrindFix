@@ -47,11 +47,7 @@ export default function ContactForm() {
 
     return (
         <>
-<<<<<<< HEAD
-            <form onSubmit={handleSubmit} className="desktop-contact-form">
-=======
             <form suppressHydrationWarning onSubmit={handleSubmit} className="reservation-form">
->>>>>>> 7ee1612 (update project)
                 <div className="grid-2">
                     <div className="form-group">
                         <label htmlFor="contact-name" className="form-label">Imię i nazwisko</label>
@@ -89,13 +85,8 @@ export default function ContactForm() {
                         value={form.message} onChange={handleChange}
                         placeholder="Opisz co się dzieje z Twoim rowerem lub czego potrzebujesz..." />
                 </div>
-<<<<<<< HEAD
-                <button type="submit" className="btn-primary" style={{ width: "100%" }} disabled={loading}>
-                    {loading ? "Wysyłanie..." : "📅 Wyślij zapytanie i zarezerwuj wizytę"}
-=======
                 <button suppressHydrationWarning type="submit" className="btn-primary" style={{ width: "100%" }} disabled={loading}>
                     {loading ? "Wysyłanie..." : "📅 Wyślij i zarezerwuj"}
->>>>>>> 7ee1612 (update project)
                 </button>
                 {error && (
                     <p style={{ color: "red", textAlign: "center", marginTop: "1rem", fontSize: "0.9rem" }}>
