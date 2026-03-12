@@ -6,7 +6,10 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { ServiceJsonLd } from "@/components/seo/JsonLd";
 import ContactForm from "@/components/ui/ContactForm";
 import Link from "next/link";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 7ee1612 (update project)
 
 export const metadata: Metadata = generateMeta({
     title: "Serwis Rowerowy Wola Warszawa | GRINDFIX",
@@ -39,6 +42,7 @@ export default function Wola() {
                             </div>
                         </div>
                         <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+<<<<<<< HEAD
                             <Image
                               src="/FOTO/bike_service.jpg"
                               alt="Serwis Rowerowy Wola"
@@ -47,6 +51,12 @@ export default function Wola() {
                               priority
                               sizes="(max-width: 768px) 100vw, 50vw"
                               style={{ width: "100%", height: "auto", maxHeight: "450px", objectFit: "cover", borderRadius: "1.5rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+=======
+                            <img 
+                                src="/FOTO/bike_service.jpg" 
+                                alt="Serwis Rowerowy Wola" 
+                                style={{ width: "100%", height: "auto", maxHeight: "450px", objectFit: "cover", borderRadius: "1.5rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }} 
+>>>>>>> 7ee1612 (update project)
                             />
                         </div>
                     </div>

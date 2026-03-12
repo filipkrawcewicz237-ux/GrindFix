@@ -61,6 +61,7 @@ export default function Header() {
                 </button>
             </div>
 
+<<<<<<< HEAD
             {/* Mobile menu */}
             {open && (
                 <div style={{
@@ -70,6 +71,59 @@ export default function Header() {
                     <MobileNav setOpen={setOpen} />
                 </div>
             )}
+=======
+            {/* Mobile menu overlay */}
+            <div style={{
+                position: "fixed", top: 0, left: 0, width: "100%", height: "100vh",
+                background: "rgba(0,0,0,0.5)", zIndex: 999,
+                opacity: open ? 1 : 0, visibility: open ? "visible" : "hidden",
+                transition: "opacity 0.3s ease, visibility 0.3s ease",
+            }} onClick={() => setOpen(false)} />
+
+            {/* Mobile menu container */}
+            <div style={{
+                position: "fixed", top: 0, right: 0, width: "85%", maxWidth: "400px", height: "100vh",
+                background: "#fff", zIndex: 1000,
+                transform: open ? "translateX(0)" : "translateX(100%)",
+                transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                display: "flex", flexDirection: "column",
+                boxShadow: "-4px 0 24px rgba(0,0,0,0.1)",
+                overflowY: "auto",
+            }}>
+                {/* Mobile menu header */}
+                <div style={{ 
+                    display: "flex", alignItems: "center", justifyContent: "space-between", 
+                    padding: "1.25rem 1.5rem", borderBottom: "1px solid #e5e7eb" 
+                }}>
+                    <Link href="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}>
+                        <span style={{
+                            background: "var(--green-primary)", color: "#fff",
+                            fontWeight: 800, fontSize: "1.2rem", padding: "0.2rem 0.6rem",
+                            borderRadius: "0.5rem", fontFamily: "var(--font-poppins), sans-serif",
+                            letterSpacing: "-0.03em",
+                        }}>GRIND</span>
+                        <span style={{
+                            background: "var(--yellow-accent)", color: "var(--gray-900)",
+                            fontWeight: 800, fontSize: "1.2rem", padding: "0.2rem 0.6rem",
+                            borderRadius: "0.5rem", fontFamily: "var(--font-poppins), sans-serif",
+                            letterSpacing: "-0.03em",
+                        }}>FIX</span>
+                    </Link>
+                    <button onClick={() => setOpen(false)} style={{ 
+                        border: "none", fontSize: "1.5rem", 
+                        cursor: "pointer", color: "var(--gray-900)", 
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        width: "40px", height: "40px", borderRadius: "50%",
+                        background: "var(--gray-50)",
+                    }}>✕</button>
+                </div>
+
+                {/* Mobile menu specific nav content */}
+                <div style={{ padding: "0" }}>
+                    <MobileNav setOpen={setOpen} />
+                </div>
+            </div>
+>>>>>>> 7ee1612 (update project)
 
             <style>{`
         @media (max-width: 900px) {
@@ -145,6 +199,7 @@ function NavDropdown({ label, items }: { label: string; items: typeof SERVICES }
 }
 
 function MobileNav({ setOpen }: { setOpen: (v: boolean) => void }) {
+<<<<<<< HEAD
     return (
         <nav style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
             {[
@@ -171,5 +226,86 @@ function MobileNav({ setOpen }: { setOpen: (v: boolean) => void }) {
                 📅 Zarezerwuj wizytę
             </a>
         </nav>
+=======
+    const [servicesOpen, setServicesOpen] = useState(false);
+
+    return (
+        <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+            <nav style={{ display: "flex", flexDirection: "column" }}>
+                <Link href="/" onClick={() => setOpen(false)} style={{
+                    color: "var(--gray-900)", fontWeight: 600, fontSize: "1.1rem",
+                    padding: "1rem 1.5rem", borderBottom: "1px solid #f3f4f6",
+                    textDecoration: "none", display: "flex", alignItems: "center", minHeight: "64px"
+                }}>Strona Główna</Link>
+                
+                {/* Services Accordion */}
+                <div>
+                    <button onClick={() => setServicesOpen(!servicesOpen)} style={{
+                        width: "100%", background: "none", border: "none",
+                        color: "var(--gray-900)", fontWeight: 600, fontSize: "1.1rem",
+                        padding: "1rem 1.5rem", borderBottom: "1px solid #f3f4f6",
+                        textAlign: "left", display: "flex", alignItems: "center", justifyContent: "space-between",
+                        cursor: "pointer", minHeight: "64px"
+                    }}>
+                        Usługi 
+                        <span style={{ 
+                            transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)", 
+                            transition: "transform 0.3s ease", fontSize: "0.8rem", opacity: 0.6 
+                        }}>▼</span>
+                    </button>
+                    
+                    <div style={{
+                        maxHeight: servicesOpen ? "500px" : "0", overflow: "hidden",
+                        transition: "max-height 0.3s ease", background: "var(--gray-50)",
+                    }}>
+                        {[
+                            { href: "/serwis-rowerowy-warszawa", label: "Serwis Rowerowy" },
+                            { href: "/naprawa-rowerow-warszawa", label: "Naprawa" },
+                            { href: "/przeglad-roweru-warszawa", label: "Przegląd" },
+                            { href: "/serwis-roweru-elektrycznego-warszawa", label: "E-Bike" },
+                            { href: "/mobilny-serwis-rowerowy-warszawa", label: "Mobilny Serwis" },
+                            { href: "/budowa-kol-rowerowych-warszawa", label: "Budowa Kół" },
+                            { href: "/serwis-amortyzatora-warszawa", label: "Serwis Amortyzatora" },
+                        ].map(({ href, label }) => (
+                            <Link key={href} href={href} onClick={() => setOpen(false)} style={{
+                                color: "var(--gray-700)", fontWeight: 500, fontSize: "1rem",
+                                padding: "0.875rem 1.5rem 0.875rem 2.5rem", borderBottom: "1px solid #e5e7eb",
+                                textDecoration: "none", display: "flex", alignItems: "center", minHeight: "48px"
+                            }}>{label}</Link>
+                        ))}
+                    </div>
+                </div>
+
+                {[
+                    { href: "/cennik", label: "Cennik" },
+                    { href: "/blog", label: "Blog" },
+                    { href: "/#kontakt", label: "Kontakt" },
+                ].map(({ href, label }) => (
+                    <Link key={href} href={href} onClick={() => setOpen(false)} style={{
+                        color: "var(--gray-900)", fontWeight: 600, fontSize: "1.1rem",
+                        padding: "1rem 1.5rem", borderBottom: "1px solid #f3f4f6",
+                        textDecoration: "none", display: "flex", alignItems: "center", minHeight: "64px"
+                    }}>{label}</Link>
+                ))}
+            </nav>
+
+            <div style={{ padding: "1.5rem", marginTop: "auto" }}>
+                <a href="/#kontakt" className="btn-primary" style={{ 
+                    width: "100%", justifyContent: "center", padding: "1rem", 
+                    fontSize: "1.1rem", borderRadius: "0.75rem" 
+                }} onClick={() => setOpen(false)}>
+                    Zarezerwuj wizytę
+                </a>
+                
+                <a href="tel:+48572456397" style={{ 
+                    display: "block", textAlign: "center", marginTop: "1rem",
+                    color: "var(--gray-900)", fontWeight: 700, fontSize: "1.2rem",
+                    textDecoration: "none"
+                }}>
+                    +48 572 456 397
+                </a>
+            </div>
+        </div>
+>>>>>>> 7ee1612 (update project)
     );
 }

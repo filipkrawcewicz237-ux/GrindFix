@@ -8,7 +8,11 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { ArticleJsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 
+<<<<<<< HEAD
 export const revalidate = 3600;
+=======
+export const dynamic = "force-dynamic";
+>>>>>>> 7ee1612 (update project)
 
 export async function generateStaticParams() {
     const slugs = await getBlogSlugs();

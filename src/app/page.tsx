@@ -7,9 +7,14 @@ import Testimonials from "@/components/ui/Testimonials";
 import ServiceCard from "@/components/ui/ServiceCard";
 import ContactForm from "@/components/ui/ContactForm";
 import Link from "next/link";
+<<<<<<< HEAD
 import Image from "next/image";
 
 export const revalidate = 3600;
+=======
+
+export const dynamic = "force-dynamic";
+>>>>>>> 7ee1612 (update project)
 
 export const metadata: Metadata = generateMeta({
   title: "Serwis Rowerowy Warszawa | Naprawa i Przegląd – GRINDFIX",
@@ -75,6 +80,7 @@ export default async function HomePage() {
               </div>
             </div>
             <div className="fade-in-up" style={{ width: "100%", display: "flex", justifyContent: "center", marginTop: "3.25rem" }}>
+<<<<<<< HEAD
               <Image
                 src="/FOTO/1.jpg"
                 alt="Serwis Rowerowy Warszawa"
@@ -83,6 +89,12 @@ export default async function HomePage() {
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ width: "100%", height: "auto", maxHeight: "550px", objectFit: "cover", borderRadius: "1.5rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+=======
+              <img 
+                src="/FOTO/1.jpg" 
+                alt="Serwis Rowerowy Warszawa" 
+                style={{ width: "100%", height: "auto", maxHeight: "550px", objectFit: "cover", borderRadius: "1.5rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }} 
+>>>>>>> 7ee1612 (update project)
               />
             </div>
           </div>

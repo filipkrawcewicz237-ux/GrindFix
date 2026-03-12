@@ -7,7 +7,10 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { ServiceJsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import ContactForm from "@/components/ui/ContactForm";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 7ee1612 (update project)
 
 export const metadata: Metadata = generateMeta({
     title: "Serwis Roweru Elektrycznego Warszawa | E-Bike | GRINDFIX",
@@ -46,6 +49,7 @@ export default function SerwisEbike() {
                             </div>
                         </div>
                         <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+<<<<<<< HEAD
                             <Image
                               src="/FOTO/e-bike.jpg"
                               alt="Serwis Roweru Elektrycznego Warszawa"
@@ -54,6 +58,12 @@ export default function SerwisEbike() {
                               priority
                               sizes="(max-width: 768px) 100vw, 50vw"
                               style={{ width: "100%", height: "auto", maxHeight: "450px", objectFit: "cover", borderRadius: "1.5rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+=======
+                            <img 
+                                src="/FOTO/e-bike.jpg" 
+                                alt="Serwis Roweru Elektrycznego Warszawa" 
+                                style={{ width: "100%", height: "auto", maxHeight: "450px", objectFit: "cover", borderRadius: "1.5rem", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }} 
+>>>>>>> 7ee1612 (update project)
                             />
                         </div>
                     </div>
