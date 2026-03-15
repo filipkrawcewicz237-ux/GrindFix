@@ -42,8 +42,6 @@ export const metadata: Metadata = {
   creator: "GRINDFIX",
   publisher: "GRINDFIX",
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-
-
   verification: {
     google: "x2ncdl3AHkZ-LMKABE50pB2N8sSk5rJEhtmW7B0-aH0",
   },
@@ -60,6 +58,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl" className={`${inter.variable} ${poppins.variable}`}>
+      <head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="theme-color" content="#16a34a" />
+      </head>
       <body>
         <LocalBusinessJsonLd />
         <Header />

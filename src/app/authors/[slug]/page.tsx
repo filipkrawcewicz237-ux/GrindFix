@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: `${author.name} – ${author.role} | GRINDFIX Blog`,
         description: author.bio.substring(0, 160),
         alternates: { canonical: `${SITE_URL}/authors/${slug}` },
+        robots: { index: true, follow: true },
     };
 }
 

@@ -18,9 +18,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: base, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
         { url: `${base}/cennik`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
         { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+        // Service pages - główne
+        { url: `${base}/naprawa-rowerow-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${base}/przeglad-roweru-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${base}/serwis-roweru-elektrycznego-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${base}/budowa-kol-rowerowych-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${base}/serwis-amortyzatora-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${base}/mobilny-serwis-rowerowy-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        // District pages
+        { url: `${base}/serwis-rowerowy-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
         { url: `${base}/serwis-rowerowy-mokotow`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
         { url: `${base}/serwis-rowerowy-ursynow`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
         { url: `${base}/serwis-rowerowy-wola`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+        { url: `${base}/serwis-rowerowy-praga`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+        { url: `${base}/serwis-rowerowy-srodmiescie`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+        // Corporate pages
+        { url: `${base}/wydarzenie-rowerowe-dla-firm`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${base}/dzien-serwisu-rowerowego-dla-firm`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${base}/abonament-rowerowy-warszawa`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     ];
 
     const servicePages: MetadataRoute.Sitemap = [...serviceSlugs].map((slug) => ({
